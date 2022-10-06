@@ -18,3 +18,8 @@ def fft(data: list) -> list:
         result[k] = p + q
         result[k + mid] = p - q
     return result
+
+
+def fft_freqs(fft_num: int, rate: int) -> list:
+    """FFT frequencies."""
+    return [i / fft_num * rate for i in range(fft_num // 2 + 1)]
